@@ -1,0 +1,33 @@
+<svg width="57" height="33" viewBox="0 0 57 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="57" height="33" fill="#1E1E1E"/>
+<g id="Home - Final">
+<rect width="1440" height="13464.6" transform="translate(-659.068 -13197.6)" fill="white"/>
+<g id="Frame 542">
+<rect width="1440" height="709" transform="translate(-659.068 -539.983)" fill="url(#paint0_linear_0_1)"/>
+<g id="Frame 598">
+<g id="Frame 568">
+<g id="Card Payment/Mastercard">
+<g clip-path="url(#clip0_0_1)">
+<rect id="Background" x="1.0166" y="-11.4531" width="54.9153" height="54.9153" rx="4.0678" fill="white"/>
+<g id="Vector">
+<path d="M33.9731 5.98156H22.9744V25.7444H33.9731V5.98156Z" fill="#FF5F00"/>
+<path d="M23.6727 15.863C23.6727 11.8476 25.5582 8.28607 28.4563 5.98156C26.3264 4.30556 23.6378 3.29297 20.7048 3.29297C13.7564 3.29297 8.13477 8.91457 8.13477 15.863C8.13477 22.8114 13.7564 28.433 20.7048 28.433C23.6378 28.433 26.3264 27.4205 28.4563 25.7444C25.5582 23.4749 23.6727 19.8784 23.6727 15.863Z" fill="#EB001B"/>
+<path d="M48.8127 15.863C48.8127 22.8114 43.1912 28.433 36.2427 28.433C33.3097 28.433 30.6211 27.4205 28.4912 25.7444C31.4242 23.4399 33.2748 19.8784 33.2748 15.863C33.2748 11.8476 31.3893 8.28607 28.4912 5.98156C30.6211 4.30556 33.3097 3.29297 36.2427 3.29297C43.1912 3.29297 48.8127 8.94948 48.8127 15.863Z" fill="#FF5F00"/>
+</g>
+</g>
+<rect x="0.508127" y="0.508127" width="55.9322" height="31.0169" rx="4.57627" stroke="black" stroke-opacity="0.1" stroke-width="1.01695"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_1" x1="720" y1="0" x2="720" y2="709" gradientUnits="userSpaceOnUse">
+<stop stop-color="#219EBC"/>
+<stop offset="1" stop-color="#023047"/>
+</linearGradient>
+<clipPath id="clip0_0_1">
+<rect x="1.0166" y="1.0166" width="54.9153" height="30" rx="4.0678" fill="white"/>
+</clipPath>
+</defs>
+</svg>
