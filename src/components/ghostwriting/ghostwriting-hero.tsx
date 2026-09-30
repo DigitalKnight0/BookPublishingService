@@ -26,6 +26,37 @@ export function SingleServiceHero({
       </div>
       <div className="absolute inset-x-0 top-[67px] bottom-0 -z-20 bg-[rgba(2,48,71,.83)] lg:top-[clamp(3.5625rem,3.958vw,4.75rem)]" />
 
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-y-0 left-1/2 z-0 hidden w-[min(100vw,120rem)] -translate-x-1/2 min-[1180px]:block"
+      >
+        <div className="absolute top-[29.39%] left-0 w-[14.86%]">
+          <Image
+            src={figmaAssets.ghostwritingPage.heroArtwork.left}
+            alt=""
+            width={214}
+            height={406}
+            priority
+            unoptimized
+            className="h-auto w-full"
+            sizes="(min-width: 1920px) 285px, 14.86vw"
+          />
+        </div>
+
+        <div className="absolute top-[7.39%] left-[67.986%] w-[32.014%]">
+          <Image
+            src={figmaAssets.ghostwritingPage.heroArtwork.right}
+            alt=""
+            width={461}
+            height={462}
+            priority
+            unoptimized
+            className="h-auto w-full"
+            sizes="(min-width: 1920px) 615px, 32.014vw"
+          />
+        </div>
+      </div>
+
       <div className="absolute inset-x-5 top-[7.25rem] z-10 flex justify-center text-center sm:inset-x-10 sm:top-[8.5rem] lg:top-[clamp(5.25rem,5.833vw,7rem)] lg:left-[6.944vw] lg:h-[clamp(27rem,30vw,36rem)] lg:w-[86.111vw] lg:items-center">
         <div className="w-full max-w-[50rem] lg:w-[min(51.042vw,61.25rem)] lg:max-w-none">
           <h1 className="hero-copy-enter font-display text-[clamp(3rem,10vw,4rem)] leading-[1.08] tracking-[0.01em] text-balance lg:text-[clamp(3.5rem,3.889vw,4.6667rem)] lg:leading-[1.4]">

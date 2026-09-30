@@ -41,9 +41,9 @@ export function PublishingServicesCta() {
             size="display"
             className="text-white lg:text-[clamp(3.5rem,3.889vw,4.6667rem)] lg:leading-[1.4]"
           >
-            Ready to publish?
+            Ready To Publish?
             <br />
-            Check our Book Publishing Services.
+            Check Our Book Publication Solutions.
           </Heading>
           <p className="mt-2.5 max-w-[27.25rem] text-base leading-[1.2] lg:mt-[clamp(.625rem,.694vw,.8333rem)] lg:max-w-[min(30.299vw,36.359rem)] lg:text-[clamp(1rem,1.111vw,1.3333rem)] lg:leading-[normal]">
             No matter your background or experience, we&apos;re committed to
@@ -52,6 +52,7 @@ export function PublishingServicesCta() {
           </p>
           <Link
             href="/#contact"
+            data-live-chat
             className={cn(
               buttonVariants({ variant: "secondary", size: "md" }),
               "mt-10 lg:mt-[clamp(2.5rem,2.778vw,3.3333rem)] lg:min-h-[clamp(2.9375rem,3.247vw,3.8958rem)] lg:rounded-[clamp(.625rem,.694vw,.8333rem)] lg:px-[clamp(1.25rem,1.389vw,1.6667rem)] lg:py-0 lg:text-[clamp(1.125rem,1.25vw,1.5rem)]",

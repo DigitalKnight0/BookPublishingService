@@ -7,9 +7,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Publishing Packages",
+  title: "Pricing | Transparent Book Publishing Packages",
   description:
-    "Flexible book publishing packages for authors, from manuscript review and design to distribution and launch support.",
+    "Clear publishing packages for every author, from starter to enterprise. Self publish a book on a plan you can read at a glance.",
 };
 
 export default function PackagesPage() {

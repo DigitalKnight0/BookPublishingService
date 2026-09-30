@@ -2,49 +2,110 @@ import Image from "next/image";
 
 import { AccentText, Heading } from "@/components/ui";
 import { figmaAssets } from "@/design-system";
+import { cn } from "@/lib/utils";
 
-const steps = [
+const homeSteps = [
   {
     number: "01",
-    title: "Share Your Vision",
+    title: "Consultation",
     description:
-      "Your journey begins with a simple sign-up and a conversation about your book before we carefully match your project with the team best suited to bring your story to life.",
+      "We hop on a free call to hear about the book, who it is for, and what a win looks like to you.",
   },
   {
     number: "02",
-    title: "Meet Your Project Manager",
+    title: "Manuscript Review",
     description:
-      "After onboarding, you’ll be assigned a dedicated project manager who will serve as your primary point of contact throughout the process, keeping everything on schedule.",
+      "We read the whole draft closely, then hand you a plain roadmap of what it needs.",
   },
   {
     number: "03",
-    title: "Watch Your Story Come to Life",
+    title: "Editing",
     description:
-      "Once the project plan is approved, your writer or editor begins crafting your manuscript. Every chapter is developed with your feedback, ensuring the final work reflects your voice and vision.",
+      "We work through the pages at every level, from structure down to the last comma.",
   },
   {
     number: "04",
-    title: "Elevate Your Book’s Presentation",
+    title: "Design and Illustrations",
     description:
-      "Next, our design specialists take over. Professional formatting ensures a seamless reading experience, while our creative designers produce covers and supporting graphics that make your book stand out.",
+      "We build the cover, choose the type, and lay out every interior page.",
   },
   {
     number: "05",
-    title: "Publish for a Global Audience",
+    title: "Publishing",
     description:
-      "When everything is ready with your approval, our publishing experts prepare your manuscript for distribution across leading platforms, transforming it into a professionally published title available to readers around the world.",
+      "We sort the ISBN and metadata, then push your book live with retailers.",
   },
   {
     number: "06",
-    title: "Grow Your Author Brand",
+    title: "Distribution",
     description:
-      "Publishing is only the beginning. Our marketing team develops a customized promotional strategy designed to increase your book’s visibility and strengthen your presence as an author across global markets.",
+      "We widen the net through premium channels that reach readers worldwide.",
+  },
+  {
+    number: "07",
+    title: "Marketing",
+    description:
+      "We run the launch, gather reviews, and keep the book selling well past week one.",
   },
 ] as const;
 
-export function PublishingProcessSection() {
+const lpSteps = [
+  {
+    number: "01",
+    title: "Consultation",
+    description:
+      "We get to know the book, the reader, and what you want from it.",
+  },
+  {
+    number: "02",
+    title: "Manuscript Review",
+    description:
+      "We ghostwrite from scratch, or read and map your existing draft.",
+  },
+  {
+    number: "03",
+    title: "Editing",
+    description: "We shape, tighten, and proofread the manuscript.",
+  },
+  {
+    number: "04",
+    title: "Design and Illustrations",
+    description: "We create the cover, interior, and any original artwork.",
+  },
+  {
+    number: "05",
+    title: "Publishing",
+    description:
+      "We handle ISBN, metadata, and your book's retail listings.",
+  },
+  {
+    number: "06",
+    title: "Distribution",
+    description:
+      "We send the book out through premium global distribution channels.",
+  },
+  {
+    number: "07",
+    title: "Marketing",
+    description: "We help readers find it and keep it selling.",
+  },
+] as const;
+
+export function PublishingProcessSection({
+  variant = "home",
+}: {
+  variant?: "home" | "lp";
+}) {
+  const isLp = variant === "lp";
+  const steps = isLp ? lpSteps : homeSteps;
+
   return (
-    <section className="relative isolate overflow-hidden bg-white px-5 pt-20 pb-20 text-ink sm:px-10 lg:px-[6.944vw] lg:pt-[6.25rem] lg:pb-0.5">
+    <section
+      className={cn(
+        "relative isolate overflow-hidden bg-white px-5 pt-20 pb-20 text-ink sm:px-10 lg:px-[6.944vw] lg:pt-[6.25rem]",
+        isLp ? "lg:pb-[6.25rem]" : "lg:pb-0.5",
+      )}
+    >
       <div
         aria-hidden="true"
         className="pointer-events-none absolute top-[-2rem] right-[-72vw] -z-10 hidden h-[67.6rem] w-[102.5vw] overflow-hidden lg:block"
@@ -79,12 +140,20 @@ export function PublishingProcessSection() {
         className="mx-auto flex max-w-[37.8125rem] flex-col items-center text-center"
       >
         <Heading as="h2" size="display" align="center">
-          Simple steps to self <AccentText>Publish a book</AccentText> with flair
+          {isLp ? (
+            <>
+              How It Works <AccentText>Start To Finish</AccentText>
+            </>
+          ) : (
+            <>
+              How A Manuscript <AccentText>Becomes A Book</AccentText>
+            </>
+          )}
         </Heading>
         <p className="mt-2.5 max-w-[33.582rem] text-base leading-[1.2]">
-          From editing and formatting to cover design, publishing, and
-          distribution, we provide the expertise and support you need to bring
-          your vision to life.
+          {isLp
+            ? "Here is exactly how we help you publish a book, one step at a time."
+            : "A clear, seven-step path from your first conversation to an active book launch."}
         </p>
       </div>
 
@@ -117,6 +186,7 @@ export function PublishingProcessSection() {
           </article>
         ))}
       </div>
+
     </section>
   );
 }

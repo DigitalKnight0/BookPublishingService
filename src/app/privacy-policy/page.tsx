@@ -6,7 +6,7 @@ import { privacySections } from "@/content/legal-pages";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Privacy policy explaining how Book Publication Solutions collects, uses, and protects personal information.",
+    "How Book Publication Solutions collects, uses, and protects your personal information.",
 };
 
 export default function PrivacyPolicyPage() {

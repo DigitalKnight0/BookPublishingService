@@ -9,43 +9,33 @@ import { figmaAssets } from "@/design-system";
 const testimonials = [
   {
     quote:
-      "“I honestly thought publishing a book would be overwhelming, but Book Publication Services made everything so much easier than I expected. Seeing my book published was such a rewarding moment, and I couldn’t have done it without their support.”",
+      "“I honestly thought publishing a book would be overwhelming, but Book Publication Solutions made everything so much easier than I expected. Seeing my book published was such a rewarding moment, and I couldn't have done it without their support.”",
     author: "Sarah M. – First-Time Author",
   },
   {
     quote:
-      "“One of the best decisions I made was having Book Publication Services build my author website. It looks professional, is easy to navigate, and gives readers one place to learn about me and my books.”",
+      "“One of the best decisions I made was having Book Publication Solutions build my author website. It looks professional, is easy to navigate, and gives readers one place to learn about me and my books.”",
     author: "David R. – Business Author",
   },
   {
     quote:
-      "“The editing team treated my manuscript with real care. They strengthened the pacing and clarity without losing the voice that made the story mine.”",
-    author: "Melissa T. – Fiction Author",
+      "“I was nervous about letting someone edit my manuscript because I didn't want to lose my writing style. The editor completely understood my vision and only made changes that strengthened the story. My book reads so much better now, and I'm incredibly grateful for their thoughtful feedback.”",
+    author: "Jessica L. – Fiction Writer",
   },
   {
     quote:
-      "“From the first cover concept to the finished paperback, every stage felt organized and collaborative. The final book looks better than I imagined.”",
-    author: "James K. – Memoir Author",
+      "“I knew my cover had to make a great first impression, and the design team absolutely delivered. They listened to my ideas, shared creative suggestions, and came back with a cover that felt like it belonged on a bookstore shelf.”",
+    author: "Mark T. – Self-Published Author",
   },
   {
     quote:
-      "“I always received clear updates and knew exactly what was happening next. That communication made my first publishing experience feel completely manageable.”",
-    author: "Priya S. – First-Time Author",
+      "“From our very first conversation, I felt like the team genuinely cared about my book. Every step was handled professionally, and the whole experience was much smoother than I imagined.”",
+    author: "Rachel P. – Children's Book Author",
   },
   {
     quote:
-      "“Their marketing guidance helped me present my book confidently and connect with readers beyond my existing audience. The launch finally felt purposeful.”",
-    author: "Daniel W. – Self-Help Author",
-  },
-  {
-    quote:
-      "“The illustrations captured the warmth and personality of my story beautifully. My characters finally looked the way I had pictured them for years.”",
-    author: "Rachel B. – Children’s Author",
-  },
-  {
-    quote:
-      "“What stood out most was how closely the team listened. Every recommendation felt tailored to my book rather than pulled from a standard template.”",
-    author: "Michael A. – Nonfiction Author",
+      "“What stood out to me most was the communication. Whenever I had a question, someone was always there to help. Book Publication Solutions delivered exactly what they promised, stayed transparent throughout the process. I'd happily work with them again for my next project.”",
+    author: "Kevin A. – Author & Speaker",
   },
 ] as const;
 
@@ -198,7 +188,7 @@ export function TestimonialsSection({
         className="mx-auto flex max-w-[37.875rem] flex-col items-center text-center"
       >
         <Heading as="h2" size="display" align="center" className="text-white">
-          What Our Clients Say
+          What Our Author Says
         </Heading>
         <p className="mt-2.5 max-w-[36.047rem] text-base leading-[1.2]">
           We&apos;ve helped hundreds of people to capture their stories and we

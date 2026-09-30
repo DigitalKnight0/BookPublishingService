@@ -36,7 +36,7 @@ export function LegalPage({
 }) {
   return (
     <>
-      <SiteHeader contactHref="/#contact" />
+      <SiteHeader />
       <main>
         <section className="bg-brand-deep pt-[67px] text-white lg:pt-[clamp(3.5625rem,4.653vw,5.5833rem)]">
           <div className="flex min-h-[22rem] items-center justify-center px-5 py-20 text-center sm:px-10 lg:min-h-[clamp(22rem,28.663vw,34.3958rem)] lg:px-[6.944vw] lg:py-0">
@@ -45,7 +45,9 @@ export function LegalPage({
                 {title}
               </h1>
               <p className="hero-copy-enter hero-copy-enter-delay-1 mt-2.5 text-base leading-normal sm:text-lg lg:text-[clamp(1rem,1.389vw,1.6667rem)]">
-                Last Updated: [Insert Date]
+                Effective date: January 1, 2026. {title === "Privacy Policy"
+                  ? "This page sets out how we collect, use, and protect your information."
+                  : "Please read these terms carefully before using our website or services."}
               </p>
             </div>
           </div>

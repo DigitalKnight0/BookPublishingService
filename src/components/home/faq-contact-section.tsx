@@ -1,35 +1,58 @@
 "use client";
 
+import type { FormEvent } from "react";
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 import { AccentText, Heading, Input, Textarea } from "@/components/ui";
+import { getLeadFields, submitLead } from "@/lib/lead-submission";
 
 const faqs = [
   {
-    question: "What Is Self-Publishing?",
+    question: "What does self-publishing actually mean?",
     answer:
-      "Self-publishing gives authors complete ownership of their publishing journey. You can publish independently or work with a professional self-publishing company like Book Publication Services to manage the process. Our self-publishing solutions include manuscript editing, cover design, interior formatting, ISBN assistance, distribution, and marketing support to help transform your manuscript into a professionally published book.",
+      "It means you call the shots on content, cover, price, and timing, and we do the professional work. The rights to the book remain yours.",
   },
   {
-    question: "What Is the Typical Timeline for the Publishing Process?",
+    question: "How long does the whole process take?",
     answer:
-      "Publishing timelines vary by manuscript length and the services required. Most projects move from editing through design, approval, and distribution in several weeks, with your project manager providing a clear schedule at onboarding.",
+      "Roughly 2 to 4 weeks for most projects. A polished manuscript moves quickest, and writing from scratch takes longer. You get a real schedule after our first call.",
   },
   {
-    question: "What Marketing and Promotion Support Do You Provide?",
+    question: "What kind of marketing do you handle?",
     answer:
-      "Our marketing support can include launch planning, platform optimization, author branding, social and email campaigns, press releases, and promotional strategies tailored to your book and audience.",
+      "We set up your launch, build your platform, and write the description and keywords that attract readers. Reviews, press, and longer campaigns maintain the momentum.",
   },
   {
-    question: "What Types of Editing Services Do You Offer?",
+    question: "Which levels of editing can I choose from?",
     answer:
-      "We offer developmental editing, line and copy editing, proofreading, and manuscript reviews. Your editor recommends the right level of support after evaluating your draft and publishing goals.",
+      "Four, and you can take one or all. Developmental editing improves structure, line editing sharpens style, copyediting fixes accuracy, and proofreading handles the final polish.",
   },
   {
-    question: "What Is the Cost of Design and Illustration Services?",
+    question: "What do design and illustrations cost?",
     answer:
-      "Design and illustration costs depend on complexity, style, page count, and the number of concepts required. We provide a tailored quote before work begins, with the scope and deliverables clearly defined.",
+      "It depends. A single cover sits well below a full package with interior layout and custom art. You always see the number before we begin.",
+  },
+  {
+    question: "Do I really keep the rights?",
+    answer:
+      "Completely. Ownership and royalties are yours alone. We never take a slice of your sales or lay any claim to your work.",
+  },
+  {
+    question: "Where can people buy my book?",
+    answer:
+      "We push it out to Amazon, Barnes & Noble, Apple Books, Kobo, and thousands of other retailers in more than 200 countries.",
+  },
+  {
+    question: "Do you make children's books?",
+    answer:
+      "We do. As children's book publishers, we create custom illustrations and layouts built around young readers.",
+  },
+  {
+    question: "Can I hire you for just one thing?",
+    answer:
+      "Absolutely. Many authors come to us only for editing, or only for design and illustrations, then publish their book their own way.",
   },
 ] as const;
 
@@ -62,7 +85,28 @@ export function FaqContactSection({
   spaciousTop?: boolean;
   pageTop?: boolean;
 }) {
+  const router = useRouter();
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [submissionStatus, setSubmissionStatus] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+
+    setSubmissionStatus("submitting");
+
+    try {
+      await submitLead(getLeadFields(form, "General Publishing Inquiry"));
+      form.reset();
+      setSubmissionStatus("success");
+      router.push("/thank-you");
+    } catch (error) {
+      console.error("Unable to submit lead", error);
+      setSubmissionStatus("error");
+    }
+  };
 
   const topPadding = pageTop
     ? "pt-20 lg:pt-[6.944vw]"
@@ -75,9 +119,9 @@ export function FaqContactSection({
       id="contact"
       className={`bg-gradient-pale scroll-mt-20 px-5 pb-20 text-ink sm:px-10 lg:px-[6.944vw] lg:pb-[6.25rem] ${topPadding}`}
     >
-      <div data-reveal="up">
+      <div id="faq" data-reveal="up" className="scroll-mt-24">
         <Heading as="h2" size="display" align="center">
-          How can we <AccentText>help?</AccentText>
+          The Questions <AccentText>Authors Always Ask</AccentText>
         </Heading>
       </div>
 
@@ -125,6 +169,7 @@ export function FaqContactSection({
 
         <form
           data-reveal="right"
+          onSubmit={handleSubmit}
           className="bg-gradient-action flex min-h-[35.3125rem] flex-col gap-[1.3125rem] rounded-[1.25rem] border border-brand p-6 text-white shadow-[0_18px_48px_rgba(2,48,71,.16)] transition-shadow duration-300 hover:shadow-[0_24px_60px_rgba(2,48,71,.24)] sm:p-8"
         >
           <div>
@@ -143,6 +188,7 @@ export function FaqContactSection({
             <Input
               id="quote-name"
               name="name"
+              required
               placeholder="Name"
               autoComplete="name"
               className={quoteFieldClassName}
@@ -157,6 +203,7 @@ export function FaqContactSection({
                   id="quote-email"
                   name="email"
                   type="email"
+                  required
                   placeholder="Email"
                   autoComplete="email"
                   className={quoteFieldClassName}
@@ -170,6 +217,7 @@ export function FaqContactSection({
                   id="quote-phone"
                   name="phone"
                   type="tel"
+                  required
                   placeholder="Phone Number"
                   autoComplete="tel"
                   className={quoteFieldClassName}
@@ -183,6 +231,7 @@ export function FaqContactSection({
             <Textarea
               id="quote-message"
               name="message"
+              required
               placeholder="Tell us about your book"
               className={`min-h-[10.3125rem] flex-1 ${quoteFieldClassName}`}
             />
@@ -192,24 +241,53 @@ export function FaqContactSection({
             <input
               name="consent"
               type="checkbox"
+              required
               className="mt-0.5 size-4 shrink-0 appearance-none rounded-[0.1875rem] border-[1.5px] border-white checked:bg-white checked:bg-[linear-gradient(135deg,transparent_42%,#023047_42%,#023047_55%,transparent_55%)]"
             />
             <span>
               By submitting this form and entering your phone number above, you
               agree to receive automated text messages from our brand and agree
               to our{" "}
-              <Link href="#legal" className="underline underline-offset-2">
-                Terms and Privacy.
+              <Link
+                href="/terms-and-conditions"
+                className="underline underline-offset-2"
+              >
+                Terms
               </Link>
+              {" "}and{" "}
+              <Link
+                href="/privacy-policy"
+                className="underline underline-offset-2"
+              >
+                Privacy Policy
+              </Link>
+              .
             </span>
           </label>
 
           <button
             type="submit"
+            disabled={submissionStatus === "submitting"}
             className="min-h-[2.9375rem] w-full rounded-[0.625rem] bg-white px-5 py-3 text-lg leading-normal font-medium text-ink transition-colors hover:bg-surface-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
-            Submit
+            {submissionStatus === "submitting" ? "Submitting…" : "Submit"}
           </button>
+
+          {submissionStatus === "success" || submissionStatus === "error" ? (
+            <p
+              role="status"
+              aria-live="polite"
+              className={`text-center text-sm font-medium ${
+                submissionStatus === "success"
+                  ? "text-emerald-200"
+                  : "text-red-200"
+              }`}
+            >
+              {submissionStatus === "success"
+                ? "Thank you! Your details have been sent successfully."
+                : "We couldn't send your details. Please try again."}
+            </p>
+          ) : null}
         </form>
       </div>
     </section>

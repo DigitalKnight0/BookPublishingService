@@ -8,18 +8,18 @@ import { cn } from "@/lib/utils";
 const packages = [
   {
     tier: "Starter",
-    name: "Beginner",
+    name: "For First-Time Authors",
     features: [
       "Manuscript review",
       "Proofreading",
       "Basic cover design",
       "eBook formatting",
-      "ISBN & KDP upload",
+      "ISBN and KDP upload",
     ],
   },
   {
     tier: "Professional",
-    name: "Essential",
+    name: "The Essential Launch",
     features: [
       "Line & copy editing",
       "Custom cover design",
@@ -30,7 +30,7 @@ const packages = [
   },
   {
     tier: "Premium",
-    name: "Advanced",
+    name: "Full-Service Launch",
     features: [
       "Developmental editing",
       "Premium cover concepts",
@@ -41,7 +41,7 @@ const packages = [
   },
   {
     tier: "Enterprise",
-    name: "Complete",
+    name: "For Imprints And Series",
     features: [
       "Ghostwriting available",
       "Series branding system",
@@ -61,10 +61,11 @@ export function PricingSection() {
       <div className="mx-auto flex max-w-[77.5rem] flex-col items-center">
         <div data-reveal="up" className="text-center">
           <Heading as="h2" size="display" align="center">
-            <AccentText>Transparent</AccentText> pricing, real value
+            <AccentText>Transparent Pricing</AccentText>, Real Value
           </Heading>
           <p className="mt-2.5 text-base leading-[1.2]">
-            Choose a package or build a custom plan with your project manager.
+            Pick a ready-made package, or sit with your project manager and
+            build your own.
           </p>
         </div>
 
@@ -103,7 +104,7 @@ export function PricingSection() {
               </ul>
 
               <Link
-                href="#contact"
+                href="/contact"
                 className={cn(
                   buttonVariants({ variant: "primary", size: "md" }),
                   "mt-auto w-full",
@@ -114,6 +115,10 @@ export function PricingSection() {
             </article>
           ))}
         </div>
+        <p className="mt-6 max-w-[52rem] text-center text-base leading-relaxed text-ink/75">
+          Whichever you pick, you keep 100% of your rights and get a dedicated
+          project manager. Prefer something bespoke? We will quote it.
+        </p>
       </div>
     </section>
   );

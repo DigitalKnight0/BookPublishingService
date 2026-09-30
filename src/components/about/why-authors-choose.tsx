@@ -6,40 +6,22 @@ import { cn } from "@/lib/utils";
 
 const benefits = [
   {
-    title: "Author-First Process",
+    title: "Our Mission",
     description:
-      "Every project begins with a conversation, not a contract. We understand your goals and voice before any writing.",
+      "We want every author who works with us to hold a book they are genuinely proud of, one that reads beautifully and sells honestly.",
     icon: figmaAssets.aboutPage.benefitIcons.author,
   },
   {
-    title: "In-House Experts",
+    title: "Our Vision",
     description:
-      "Our team of ghostwriters, editors, designers, and marketers ensures your story is never lost.",
+      "We picture a world where a good story finds its readers, whether its author started in a boardroom or at a kitchen table.",
     icon: figmaAssets.aboutPage.benefitIcons.experts,
   },
   {
-    title: "Full Rights, Full Control",
+    title: "Our Values",
     description:
-      "You retain complete ownership and rights to your work at every stage. We're here to support your vision, never to own it.",
+      "Craft comes before everything. Your book stays in your hands. We keep our pricing and process in the open, and we stay kind throughout.",
     icon: figmaAssets.aboutPage.benefitIcons.rights,
-  },
-  {
-    title: "Transparent Pricing",
-    description:
-      "No hidden charges, no surprise invoices. You know exactly what you're paying for before you sign off on anything.",
-    icon: figmaAssets.aboutPage.benefitIcons.pricing,
-  },
-  {
-    title: "End-to-End Support",
-    description:
-      "From your first draft to your last royalty check, we stay involved — publishing, distribution, and marketing included.",
-    icon: figmaAssets.aboutPage.benefitIcons.support,
-  },
-  {
-    title: "Proven Track Record",
-    description:
-      "250+ five-star reviews, 400+ internationally acclaimed books, and 700+ satisfied authors speak for themselves.",
-    icon: figmaAssets.aboutPage.benefitIcons.record,
   },
 ] as const;
 
@@ -64,7 +46,7 @@ export function WhyAuthorsChoose() {
           align="center"
           className="lg:text-[clamp(3.5rem,3.889vw,4.6667rem)]"
         >
-          Why Authors Choose <AccentText>Book Publication Solutions</AccentText>
+          What Guides <AccentText>Our Work</AccentText>
         </Heading>
       </div>
 
@@ -77,7 +59,7 @@ export function WhyAuthorsChoose() {
             data-motion-card
             className={cn(
               "bg-gradient-pale relative mx-auto flex w-full max-w-[23.125rem] flex-col items-center justify-center gap-2.5 rounded-[1.25rem] border border-brand px-8 pt-12 pb-8 text-center shadow-[0_16px_35px_rgba(2,48,71,.06)] transition-[transform,box-shadow] duration-300 lg:min-h-[clamp(11.3906rem,12.656vw,15.1875rem)] lg:max-w-[clamp(23.0417rem,25.602vw,30.7222rem)] lg:gap-[clamp(.625rem,.694vw,.8333rem)] lg:rounded-[clamp(1.25rem,1.389vw,1.6667rem)] lg:border-[clamp(1px,.0694vw,1.333px)] lg:px-[clamp(2rem,2.222vw,2.6667rem)] lg:pt-[clamp(3rem,3.333vw,4rem)] lg:pb-[clamp(2rem,2.222vw,2.6667rem)]",
-              index % 3 === 1 &&
+              index === 1 &&
                 "lg:translate-y-[clamp(3.5rem,3.889vw,4.6667rem)]",
             )}
           >

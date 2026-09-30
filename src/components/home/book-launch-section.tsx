@@ -42,11 +42,15 @@ export function BookLaunchSection() {
     <section className="overflow-hidden border-b-2 border-brand bg-gradient-pale px-0 pt-20 pb-[1.875rem] text-ink lg:pt-[6.25rem]">
       <div
         data-reveal="up"
-        className="mx-auto flex max-w-[55.6376rem] flex-col items-center px-5 text-center sm:px-10"
+        className="mx-auto flex max-w-[70rem] flex-col items-center px-5 text-center sm:px-10"
       >
         <Heading as="h2" size="display" align="center">
-          Launch a book that gets noticed with Book{" "}
-          <AccentText>Publication Services</AccentText>
+          <span className="lg:block lg:whitespace-nowrap">
+            Launch A Book That Gets Noticed With
+          </span>{" "}
+          <AccentText className="lg:block lg:whitespace-nowrap">
+            Book Publication Solutions
+          </AccentText>
         </Heading>
         <p className="mt-2.5 max-w-[38.625rem] text-base leading-[1.2]">
           Partner with our experienced publishing professionals and bring your
@@ -56,6 +60,7 @@ export function BookLaunchSection() {
         </p>
         <Link
           href="/#contact"
+          data-live-chat
           className={`${buttonVariants({ variant: "primary", size: "md" })} mt-10`}
         >
           Talk To An Expert

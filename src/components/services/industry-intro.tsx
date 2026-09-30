@@ -99,18 +99,13 @@ export function IndustryIntro() {
             size="display"
             className="lg:text-[clamp(3.5rem,3.889vw,4.6667rem)] lg:leading-[1.4]"
           >
-            The best in the Industry:{" "}
-            <AccentText>Amazon Publications LLC</AccentText>
+            The Best In The Industry:{" "}
+            <AccentText>Book Publication Solutions</AccentText>
           </Heading>
           <p className="mt-2.5 text-base leading-normal lg:mt-[clamp(.625rem,.694vw,.8333rem)] lg:text-[clamp(1rem,1.111vw,1.3333rem)]">
-            Do you dream of becoming a writer? Do you have a story to tell or
-            have a book living inside of you? Our ghostwriting services are
-            designed to assist you in achieving all your book writing and
-            publishing goals. Whether you struggle to find the time to write a
-            book, or you have come to a conclusion that the actual writing
-            process is not for you, the team behind Langley Sutton Publications
-            LLC is here to help you become a writer without even going through
-            the pains of putting a pen to the paper.
+            From ghostwriting and editorial polish to design, formatting,
+            worldwide distribution, and marketing, one team carries the work
+            from the first idea to the finished book.
           </p>
         </div>
       </div>

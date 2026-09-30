@@ -3,9 +3,11 @@ const base = "/assets/figma";
 export const figmaAssets = {
   manifest: `${base}/manifest.json`,
   hero: {
-    homeBackground: `${base}/library/hero/home-01.webp`,
+    homeBackground: `${base}/home-hero-new/consultant-background.png`,
+    homeOverlay: `${base}/home-hero-new/teal-overlay.svg`,
+    homeWave: `${base}/home-hero-new/bottom-wave.svg`,
     homeBookStack: `${base}/library/hero/home-03.webp`,
-    servicesBackground: `${base}/library/services-page/asset-01.webp`,
+    servicesBackground: `${base}/lp-hero-new/background-wide.png`,
     pageWave: `${base}/shared/page-wave.svg`,
   },
   cta: {
@@ -58,12 +60,17 @@ export const figmaAssets = {
   },
   servicesPage: {
     introCollage: `${base}/library/services-page/intro-collage.png`,
-    heroWave: `${base}/shared/services-page-hero-wave.svg`,
+    heroOverlay: `${base}/lp-hero-new/teal-overlay.svg`,
+    heroWave: `${base}/lp-hero-new/bottom-wave.svg`,
     workWave: `${base}/shared/services-page-work-wave.svg`,
   },
   aboutPage: {
     heroBackground: `${base}/about/about-hero-bg.jpg`,
     heroWave: `${base}/about/about-hero-wave.svg`,
+    heroArtwork: {
+      left: `${base}/about/hero-art/left-device-transparent.png`,
+      right: `${base}/about/hero-art/right-books-device-transparent.png`,
+    },
     flyingBooks: `${base}/about/flying-books.png`,
     benefitIcons: {
       author: `${base}/about/icon-author.svg`,
@@ -87,6 +94,10 @@ export const figmaAssets = {
   ghostwritingPage: {
     heroBackground: `${base}/ghostwriting/hero-background.jpg`,
     heroWave: `${base}/ghostwriting/hero-wave.svg`,
+    heroArtwork: {
+      left: `${base}/ghostwriting/hero-art/left-books-transparent.png`,
+      right: `${base}/ghostwriting/hero-art/right-device-transparent.png`,
+    },
     benefitIcons: {
       dedicatedWriter: `${base}/ghostwriting/icon-dedicated-writer.svg`,
       checkIns: `${base}/ghostwriting/icon-check-ins.svg`,
@@ -102,6 +113,10 @@ export const figmaAssets = {
   packagesPage: {
     heroBackground: `${base}/packages/hero-background.jpg`,
     heroWave: `${base}/packages/hero-wave.svg`,
+    heroArtwork: {
+      left: `${base}/packages/hero-art/left-book.png`,
+      right: `${base}/packages/hero-art/right-publishing.png`,
+    },
   },
   portfolio: {
     rowOne: [

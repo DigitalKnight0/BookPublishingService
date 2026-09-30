@@ -6,39 +6,19 @@ import { figmaAssets } from "@/design-system";
 const serviceColumns = [
   [
     "Book Publishing",
-    "Amazon (KDP) Publishing",
-    "Barnes & Noble Publishing",
-    "Kobo Book Publishing",
-    "Apple Book Publishing",
-    "Memoir Writing",
-    "Children Book Writing",
-  ],
-  [
-    "Mystery Writing",
-    "Historical Writing",
-    "Fantasy Writing",
-    "Sc-Fi Writing",
-    "Non-Fiction Writing",
-    "Historical Writing",
-    "Script Writing",
-  ],
-  [
-    "SEO Content Writing",
-    "Book Editing",
-    "Children's Book Editing",
-    "Book Proofreading",
-    "Book Formatting",
-    "Book Marketing",
-    "Audiobook Narration",
-  ],
-  [
-    "Draft2Digital Publishing",
     "Ghostwriting",
-    "Fiction Writing",
-    "Horror Writing",
-    "Book Cover Design",
-    "Book Printing",
-    "Author Website Design",
+  ],
+  [
+    "Editing and Proofreading",
+    "Design and Illustrations",
+  ],
+  [
+    "Book Marketing",
+    "Global Distribution",
+  ],
+  [
+    "Audiobook Production",
+    "Printing Services",
   ],
 ] as const;
 
@@ -85,8 +65,12 @@ export function SiteFooter({
         </div>
 
         <h2 className="text-center font-display text-[clamp(2rem,3.2vw,2.5rem)] leading-[1.4] tracking-[0.01em]">
-          Our Wide Variety of Services Includes:
+          Our Wide Variety Of Services Includes:
         </h2>
+        <p className="mx-auto mt-4 max-w-[44rem] text-center text-base leading-relaxed text-white/90">
+          A full-service publishing partner. We turn finished manuscripts into
+          well-made books and get them onto shelves around the world.
+        </p>
 
         <div className="mx-auto mt-[3.125rem] grid max-w-[68.25rem] grid-cols-2 gap-x-10 gap-y-8 text-sm leading-7 sm:text-base lg:grid-cols-4">
           {serviceColumns.map((column, columnIndex) => (
@@ -115,7 +99,7 @@ export function SiteFooter({
         </div>
 
         <p className="mx-auto mt-[3.125rem] max-w-[64.634rem] text-center text-base leading-[1.2]">
-          Disclaimer: Book Publication Services is an independent publishing
+          Disclaimer: Book Publication Solutions is an independent publishing
           services company and is not affiliated with, endorsed by, or sponsored
           by any literary agency, traditional publishing house, or retailer.
           Results, timelines, and outcomes may vary by project.
@@ -125,16 +109,16 @@ export function SiteFooter({
       <div className="bg-white px-5 py-5 text-ink sm:px-10 lg:px-[6.944vw]">
         <div className="mx-auto grid max-w-[77.5rem] gap-6 text-sm leading-6 sm:text-base lg:grid-cols-3">
           <div className="flex flex-col items-center gap-2.5">
-            <a href="tel:+12175550113" className="flex items-center gap-2.5">
+            <a href="tel:+13056028290" className="flex items-center gap-2.5">
               <Image src={figmaAssets.icons.phone} alt="" width={24} height={24} />
-              <span>(217) 555-0113</span>
+              <span>(305) 602-8290</span>
             </a>
             <a
-              href="mailto:info@amazonsite.com"
+              href="mailto:support@bookpublicationsolutions.com"
               className="flex items-center gap-2.5"
             >
               <Image src={figmaAssets.icons.mail} alt="" width={24} height={24} />
-              <span>info@amazonsite.com</span>
+              <span>support@bookpublicationsolutions.com</span>
             </a>
           </div>
 
@@ -146,12 +130,14 @@ export function SiteFooter({
                 width={24}
                 height={24}
               />
-              <span>1901 Thornridge Cir. Shiloh, Hawaii 81063</span>
+              <span>25 SE 2nd Ave Ste 550, Miami FL 33131</span>
             </p>
-            <p>© Copyright 2024 Callaghan Publications</p>
+            <p>© 2026 Book Publication Solutions. All rights reserved.</p>
           </div>
 
-          <nav className="flex flex-col items-center gap-2.5">
+          <nav className="grid w-full max-w-[22rem] grid-cols-2 items-center justify-self-center gap-x-8 gap-y-2.5 text-center">
+            <Link href="/packages">Packages</Link>
+            <Link href="/contact">Contact Us</Link>
             <Link href="/terms-and-conditions">Terms &amp; Conditions</Link>
             <Link href="/privacy-policy">Privacy Policy</Link>
           </nav>

@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 import { PortfolioGenreTabs } from "@/components/portfolio-genre-tabs";
 import { AccentText, buttonVariants, Heading } from "@/components/ui";
@@ -84,6 +87,8 @@ function CoverRow({
 }
 
 export function AboutPortfolio() {
+  const [activeGenre, setActiveGenre] = useState<string>(genres[0]);
+
   return (
     <section
       id="portfolio"
@@ -96,7 +101,7 @@ export function AboutPortfolio() {
             size="display"
             align="center"
           >
-            Stories We&apos;ve Helped <AccentText>Bring to Life</AccentText>
+            Stories We&apos;ve Helped <AccentText>Bring To Life</AccentText>
           </Heading>
         </div>
         <div className="mt-2.5 max-w-[38.625rem] text-base leading-normal">
@@ -120,11 +125,22 @@ export function AboutPortfolio() {
           data-reveal-delay="1"
           className="mt-[3.125rem]"
         >
-          <PortfolioGenreTabs genres={genres} />
+          <PortfolioGenreTabs
+            genres={genres}
+            activeGenre={activeGenre}
+            onGenreChange={setActiveGenre}
+            controls="about-portfolio-carousel"
+          />
         </div>
       </div>
 
-      <div className="mt-[4.5rem] flex flex-col gap-[2.4375rem]">
+      <div
+        key={activeGenre}
+        id="about-portfolio-carousel"
+        role="tabpanel"
+        aria-label={`${activeGenre} books`}
+        className="genre-content-enter mt-[4.5rem] flex flex-col gap-[2.4375rem]"
+      >
         <CoverRow
           covers={figmaAssets.portfolio.rowOne}
           names={coverNames.rowOne}

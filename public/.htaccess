@@ -1,0 +1,34 @@
+Options -MultiViews
+DirectoryIndex index.html
+
+RewriteEngine On
+
+# Serve exported files and route directories directly.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Support extensionless requests if a static HTML file exists.
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+ErrorDocument 404 /404.html
+
+# Always revalidate documents and unversioned media so a new cPanel upload is
+# visible immediately. Next.js fingerprints its compiled JS/CSS filenames, so
+# those files can keep the long-lived immutable cache that improves load time.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(?:html?|json|xml)$">
+    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+
+  <FilesMatch "\.(?:png|jpe?g|gif|svg|webp|avif|ico|woff2?)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+
+  <FilesMatch "\.(?:css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>

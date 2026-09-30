@@ -10,6 +10,8 @@ const metrics = [
   { value: 10, label: "Years of Experience" },
   { value: 400, label: "Internationally Acclaimed Books" },
   { value: 700, label: "Books Written" },
+  { value: 500, label: "Published Authors" },
+  { value: 200, label: "In-House Experts" },
 ] as const;
 
 const partnerLogos = [
@@ -85,27 +87,27 @@ const partnerLogos = [
 const principles = [
   {
     icon: figmaAssets.icons.quality,
-    title: "Quality Without Compromise:",
+    title: "Publishing Experts",
     description:
-      "Every manuscript gets equal editorial care and design. We ensure your book meets professional standards and impresses readers.",
+      "The people on your project have 15 years or more inside trade publishing, not learning on your dime.",
   },
   {
     icon: figmaAssets.icons.transparency,
-    title: "Transparency at Every Step:",
+    title: "Dedicated Project Manager",
     description:
-      "Great partnerships rely on clear communication. You’ll always know where your book stands in the publishing journey.",
+      "One person owns your project from start to finish, so you never have to explain yourself twice.",
   },
   {
     icon: figmaAssets.icons.vision,
-    title: "Your Vision, Our Execution:",
+    title: "You Keep 100% Rights",
     description:
-      "Your story deserves to be told your way. We collaborate, respecting your voice while transforming your ideas into a published book.",
+      "Your book stays yours. Every right and every royalty, with no asterisks.",
   },
   {
     icon: figmaAssets.icons.experience,
-    title: "Our Experience:",
+    title: "Global Distribution",
     description:
-      "With experience in various genres, our professionals combine expertise, design, and marketing to help authors publish confidently.",
+      "Your book reaches Amazon, Barnes & Noble, Ingram, Apple, Kobo, and plenty more, all over the world.",
   },
 ] as const;
 
@@ -170,14 +172,11 @@ export function ValuesSection() {
               size="display"
               className="lg:text-[clamp(3.5rem,3.889vw,4.6667rem)]"
             >
-              What We <AccentText>Stand</AccentText> For
+              Craft We <AccentText>Refuse To Rush</AccentText>
             </Heading>
             <p className="mt-5 max-w-[36.5625rem] text-base leading-[1.2] lg:mt-[clamp(1.875rem,2.083vw,2.5rem)] lg:max-w-none lg:text-[clamp(1rem,1.111vw,1.3333rem)] lg:leading-[normal]">
-              At Book Publication Services, we&apos;re more than a publishing
-              provider. We&apos;re a team of editors, designers, and publishing
-              experts committed to delivering books that reflect
-              professionalism, creativity, and the unique vision behind every
-              author&apos;s work.
+              We treat a debut as seriously as a tenth title. From the editing
+              to the print run, all of it gets full attention.
             </p>
 
             <div className="mt-[1.875rem] space-y-5 lg:mt-[clamp(1.875rem,2.083vw,2.5rem)] lg:space-y-[clamp(1.25rem,1.389vw,1.6667rem)]">

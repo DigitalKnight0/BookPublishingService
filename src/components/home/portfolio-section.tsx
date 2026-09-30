@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 import { PortfolioGenreTabs } from "@/components/portfolio-genre-tabs";
 import { AccentText, buttonVariants, Heading } from "@/components/ui";
@@ -83,6 +86,8 @@ function CoverRow({
 }
 
 export function PortfolioSection() {
+  const [activeGenre, setActiveGenre] = useState<string>(genres[0]);
+
   return (
     <section
       id="portfolio"
@@ -94,13 +99,11 @@ export function PortfolioSection() {
           className="flex max-w-[45.5rem] flex-col items-center text-center"
         >
           <Heading as="h2" size="display" align="center">
-            Explore the Books We&apos;ve <AccentText>Brought to Life</AccentText>
+            Shelves We&apos;ve <AccentText>Had A Hand In</AccentText>
           </Heading>
           <p className="mt-2.5 max-w-[38.625rem] text-base leading-[1.2]">
-            Every book in our portfolio represents a unique journey from
-            manuscript to publication. Each cover reflects the creativity,
-            dedication, and passion behind its story, showcasing the authors
-            we&apos;ve proudly helped publish on leading global platforms.
+            A selection of books we have helped shape, design, publish, and
+            place in front of readers around the world.
           </p>
         </div>
 
@@ -109,11 +112,22 @@ export function PortfolioSection() {
           data-reveal-delay="1"
           className="mt-[3.125rem]"
         >
-          <PortfolioGenreTabs genres={genres} />
+          <PortfolioGenreTabs
+            genres={genres}
+            activeGenre={activeGenre}
+            onGenreChange={setActiveGenre}
+            controls="home-portfolio-carousel"
+          />
         </div>
       </div>
 
-      <div className="mt-[4.5rem] flex flex-col gap-[2.4375rem]">
+      <div
+        key={activeGenre}
+        id="home-portfolio-carousel"
+        role="tabpanel"
+        aria-label={`${activeGenre} books`}
+        className="genre-content-enter mt-[4.5rem] flex flex-col gap-[2.4375rem]"
+      >
         <CoverRow
           covers={figmaAssets.portfolio.rowOne}
           names={coverNames.rowOne}
@@ -130,7 +144,7 @@ export function PortfolioSection() {
           href="#portfolio"
           className={buttonVariants({ variant: "primary", size: "md" })}
         >
-          See full portfolio
+          See Full Portfolio
         </Link>
       </div>
     </section>

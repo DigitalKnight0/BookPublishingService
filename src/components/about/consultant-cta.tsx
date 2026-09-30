@@ -40,20 +40,21 @@ export function ConsultantCta() {
             size="display"
             className="text-wrap text-white lg:text-[clamp(3.5rem,3.889vw,4.6667rem)] lg:leading-[1.4]"
           >
-            Not sure where to start? Talk to a Publishing Consultant.
+            Let&apos;s Build Something Lasting
           </Heading>
           <p className="mt-2.5 max-w-[27.25rem] text-base leading-normal lg:mt-[clamp(.625rem,.694vw,.8333rem)] lg:max-w-[min(30.299vw,36.359rem)] lg:text-[clamp(1rem,1.111vw,1.3333rem)]">
-            With affordable, customizable packages, we make it easy to publish
-            your book and reach readers on leading global platforms
+            Whether you plan to self publish a book or just need one piece
+            handled, we are ready when you are.
           </p>
           <Link
             href="/#contact"
+            data-live-chat
             className={cn(
               buttonVariants({ variant: "secondary", size: "md" }),
               "mt-10 lg:mt-[clamp(2.5rem,2.778vw,3.3333rem)] lg:min-h-[clamp(2.9375rem,3.264vw,3.9167rem)] lg:rounded-[clamp(.625rem,.694vw,.8333rem)] lg:px-[clamp(1.25rem,1.389vw,1.6667rem)] lg:py-0 lg:text-[clamp(1.125rem,1.25vw,1.5rem)]",
             )}
           >
-            Chat with an Expert
+            Talk To Our Team
           </Link>
         </div>
       </div>

@@ -6,7 +6,7 @@ import { termsSections } from "@/content/legal-pages";
 export const metadata: Metadata = {
   title: "Terms & Conditions",
   description:
-    "Terms and conditions for using Book Publication Solutions services and website.",
+    "The terms and conditions that govern use of the Book Publication Solutions website and services.",
 };
 
 export default function TermsAndConditionsPage() {

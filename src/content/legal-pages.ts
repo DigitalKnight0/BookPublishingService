@@ -7,138 +7,150 @@ export type LegalSection = {
 
 export const termsSections: readonly LegalSection[] = [
   {
-    title: "1. Introduction",
+    title: "1. Acceptance Of Terms",
     paragraphs: [
-      'These Terms and Conditions ("Terms") govern your use of the Book Publication Solutions website and services. By engaging our services or using this website, you agree to be bound by these Terms.',
+      "Using this website or hiring us means you accept these terms. If any part does not sit right with you, please do not use our website or services.",
     ],
   },
   {
     title: "2. Services",
     paragraphs: [
-      "Book Publication Solutions provides ghostwriting, editing, formatting, design, publishing, audiobook production, and marketing services as described on this website. The specific scope, timeline, and deliverables for each project will be confirmed in a separate service agreement or quote prior to commencement.",
+      "We provide editing, ghostwriting, design and illustrations, formatting, ISBN registration, printing, distribution, and marketing for authors. The scope, timeline, and deliverables for your project appear in a separate agreement or proposal.",
     ],
   },
   {
     title: "3. Client Responsibilities",
     paragraphs: [
-      "Clients are responsible for providing accurate information, timely feedback, and any source materials required to complete the project. Delays in providing necessary materials may affect project timelines.",
+      "You agree to give us accurate information, timely feedback, and any materials the project needs. Late or missing materials can move your timeline.",
     ],
   },
   {
-    title: "4. Intellectual Property & Ownership",
+    title: "4. Intellectual Property And Rights",
     paragraphs: [
-      "Unless otherwise agreed in writing, clients retain full ownership and rights to their manuscript and final published work. Book Publication Solutions retains no claim to authorship or royalties.",
+      "You keep full ownership of your manuscript, along with every right and royalty. We claim none of it. Original design or editorial work we produce is licensed to you once payment clears, unless we agree otherwise in writing.",
     ],
   },
   {
     title: "5. Payment Terms",
     paragraphs: [
-      "Payment schedules will be outlined in your individual service agreement. Projects may require a deposit prior to commencement, with remaining balances due at agreed milestones.",
+      "Your service agreement lays out payment, including any deposit, milestones, and final balance. Work may pause if a payment misses the agreed schedule.",
     ],
   },
   {
-    title: "6. Revisions",
+    title: "6. Cancellations And Refunds",
     paragraphs: [
-      "The number of included revision rounds varies by package and service, as detailed in your agreement. Additional revisions beyond the included scope may incur extra charges.",
+      "Cancellation and refund terms depend on how far the project has run and which package you chose. Check your service agreement, or ask us for the details on your project.",
     ],
   },
   {
-    title: "7. Cancellations & Refunds",
+    title: "7. Timelines",
     paragraphs: [
-      "Cancellation and refund terms will be specified in your individual service agreement, as they may vary based on project stage and work completed.",
+      "We estimate timelines in good faith from typical scope. Real timelines can shift with manuscript complexity, revision rounds, and how quickly you reply.",
     ],
   },
   {
-    title: "8. Confidentiality",
+    title: "8. Limitation Of Liability",
     paragraphs: [
-      "We treat all client materials, manuscripts, and personal information as confidential and will not share them with third parties without consent, except as required to deliver contracted services (e.g., printers, distribution platforms).",
+      "As far as the law allows, we are not liable for indirect, incidental, or consequential losses from using our services. That includes lost sales, lost profits, and reputational harm.",
     ],
   },
   {
-    title: "9. Limitation of Liability",
+    title: "9. Third-Party Platforms",
     paragraphs: [
-      "Book Publication Solutions is not liable for indirect, incidental, or consequential damages arising from the use of our services, including but not limited to lost sales, reviews, or publishing outcomes beyond our reasonable control.",
+      "Distribution through retailers such as Amazon, Barnes & Noble, and Apple Books follows their own terms and policies, which sit outside our control.",
     ],
   },
   {
-    title: "10. Changes to These Terms",
+    title: "10. Website Use",
     paragraphs: [
-      "We may update these Terms from time to time. Continued use of our services after changes are posted constitutes acceptance of the revised Terms.",
+      "You agree not to misuse this site, including any attempt to break into restricted areas, upload harmful code, or use it for unlawful ends.",
     ],
   },
   {
-    title: "11. Contact",
+    title: "11. Changes To These Terms",
     paragraphs: [
-      "Questions about these Terms can be directed to hello@bookpublicationsolutions.com.",
+      "We may update these terms from time to time. Continuing to use our website or services after a change is posted means you accept the update.",
+    ],
+  },
+  {
+    title: "12. Governing Law",
+    paragraphs: [
+      "These terms follow the laws of the jurisdiction where we operate, without regard to conflict of law rules.",
+    ],
+  },
+  {
+    title: "13. Contact Us",
+    paragraphs: [
+      "Questions about these terms? Email support@bookpublicationsolutions.com.",
     ],
   },
 ];
 
 export const privacySections: readonly LegalSection[] = [
   {
-    title: "1. Introduction",
+    title: "1. Information We Collect",
     paragraphs: [
-      'Book Publication Solutions ("we," "us," "our") respects your privacy. This Privacy Policy explains how we collect, use, and protect your personal information when you visit our website or use our services.',
+      "When you get in touch, ask for a consultation, or hire us, we may take your name, email, phone number, and details about your book. We also record standard technical data such as browser, device, and pages viewed to improve the site.",
     ],
   },
   {
-    title: "2. Information We Collect",
-    bullets: [
-      "Personal Information: Name, email address, phone number, and any details you submit through contact or quote forms.",
-      "Project Information: Manuscripts, notes, or materials you share with us for service delivery.",
-      "Usage Data: Information about how you interact with our website, such as pages visited and browser type, collected via cookies and analytics tools.",
-    ],
-  },
-  {
-    title: "3. How We Use Your Information",
-    intro: "We use your information to:",
-    bullets: [
-      "Respond to inquiries and provide requested services",
-      "Deliver, manage, and improve your project",
-      "Send updates related to your project (with your consent, marketing communications)",
-      "Improve our website and service offerings",
-    ],
-  },
-  {
-    title: "4. Sharing Your Information",
+    title: "2. How We Use Your Information",
     paragraphs: [
-      "We do not sell your personal information. We may share information with trusted third parties (such as printers, distribution platforms, or payment processors) only as necessary to deliver contracted services, and under confidentiality obligations.",
+      "We use what you share to reply, prepare quotes, deliver your project, and keep you posted. We may send the occasional service update, which you can opt out of whenever you like.",
     ],
   },
   {
-    title: "5. Data Security",
+    title: "3. How We Share Your Information",
     paragraphs: [
-      "We implement reasonable technical and organizational measures to protect your personal information and manuscripts from unauthorized access, loss, or misuse.",
+      "We never sell your personal information. We pass it only to trusted partners who help deliver your project, such as editors, designers, printers, and distributors. They see only what the work needs, and we may also share it where the law requires.",
     ],
   },
   {
-    title: "6. Cookies",
+    title: "4. Cookies And Tracking",
     paragraphs: [
-      "Our website may use cookies to improve user experience and analyze site traffic. You can adjust your browser settings to refuse cookies, though this may affect site functionality.",
+      "Our site may use cookies and similar tools to see how visitors use it and to run more smoothly. You can turn cookies off in your browser, though some features may stop working properly.",
     ],
   },
   {
-    title: "7. Your Rights",
+    title: "5. Data Retention",
     paragraphs: [
-      "Depending on your location, you may have rights to access, correct, or request deletion of your personal information. Contact us at hello@bookpublicationsolutions.com to make a request.",
+      "We keep personal information only as long as the purposes here require, including any publishing, distribution, or legal duties tied to your book.",
     ],
   },
   {
-    title: "8. Data Retention",
+    title: "6. Your Rights",
     paragraphs: [
-      "We retain personal and project information only as long as necessary to fulfill the purposes outlined in this policy or as required by law.",
+      "You can ask to see, correct, or delete your personal information at any time by contacting us. We respond to reasonable requests within a reasonable period.",
     ],
   },
   {
-    title: "9. Changes to This Policy",
+    title: "7. Data Security",
     paragraphs: [
-      'We may update this Privacy Policy periodically. Updates will be posted on this page with a revised "Last Updated" date.',
+      "We take sensible technical and organizational steps to protect your information from unauthorized access, loss, or misuse. No transfer over the internet is ever completely secure.",
     ],
   },
   {
-    title: "10. Contact Us",
+    title: "8. Third-Party Links",
     paragraphs: [
-      "For questions about this Privacy Policy, contact us at hello@bookpublicationsolutions.com or (207) 555-0198.",
+      "Our site may link to other sites, such as retailers or distribution partners. We are not responsible for how those outside sites handle privacy.",
+    ],
+  },
+  {
+    title: "9. Children's Privacy",
+    paragraphs: [
+      "Our services are not aimed at children under 13, and we do not knowingly collect personal information from children.",
+    ],
+  },
+  {
+    title: "10. Changes To This Policy",
+    paragraphs: [
+      "We may revise this policy now and then. Any change appears on this page with a fresh effective date.",
+    ],
+  },
+  {
+    title: "11. Contact Us",
+    paragraphs: [
+      "Questions about this policy or how we handle your information? Email support@bookpublicationsolutions.com.",
     ],
   },
 ];

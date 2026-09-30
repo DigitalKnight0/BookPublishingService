@@ -16,9 +16,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Book Publication Solutions",
+  title: "Book Publication Solutions for Authors",
   description:
-    "End-to-end writing, editing, design, publishing, and marketing support for authors.",
+    "Book publishing services that carry your manuscript from first edit to worldwide shelves. Self-publish a book with designing and distribution handled for you.",
 };
 
 export default function HomePage() {

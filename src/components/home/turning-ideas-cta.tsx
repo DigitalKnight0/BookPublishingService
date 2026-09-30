@@ -19,14 +19,12 @@ export function TurningIdeasCta() {
               fontSize: "clamp(2.75rem, 3.8889vw, 4.6667rem)",
             }}
           >
-            <span className="block">Turning Your Ideas Into</span>
-            <AccentText className="block">Published Books</AccentText>
+            <span className="block">Let&apos;s Put Your</span>
+            <AccentText className="block">Book Out There</AccentText>
           </Heading>
           <p className="mt-[clamp(0.625rem,0.6944vw,0.8333rem)] max-w-[clamp(27.269rem,30.2991vw,36.359rem)] text-[clamp(1rem,1.1111vw,1.3333rem)] leading-[1.2]">
-            Have a story, concept, or unfinished draft but unsure of the next
-            step? Our team is here to guide you through the publishing process,
-            transforming your ideas into a refined, engaging, and professionally
-            crafted manuscript that is ready to reach readers.
+            Grab a free, no-pressure call with a publishing strategist and see
+            what your launch could look like.
           </p>
           <Link
             href="#contact"
@@ -39,7 +37,7 @@ export function TurningIdeasCta() {
               fontSize: "clamp(1.125rem, 1.25vw, 1.5rem)",
             }}
           >
-            Lets Start Writing A Book
+            Get Started
           </Link>
         </div>
       </div>

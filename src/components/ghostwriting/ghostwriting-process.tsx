@@ -66,8 +66,8 @@ export function SingleServiceProcess({
           align="center"
           className="lg:text-[clamp(3.5rem,3.889vw,4.6667rem)]"
         >
-          Simple steps to start <AccentText>{service.processAccent}</AccentText>{" "}
-          with us
+          Simple Steps To Start <AccentText>{service.processAccent}</AccentText>{" "}
+          With Us
         </Heading>
         <p className="mt-2.5 max-w-[33.582rem] text-base leading-[1.2] lg:max-w-[min(37.313vw,44.776rem)] lg:text-[clamp(1rem,1.111vw,1.3333rem)]">
           {service.processDescription}

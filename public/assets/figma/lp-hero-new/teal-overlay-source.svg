@@ -1,0 +1,18 @@
+<svg width="1030" height="1004" viewBox="0 0 1030 1004" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1030" height="1004" fill="#1E1E1E"/>
+<g id="Landing - Final">
+<rect width="1920" height="6266.08" transform="translate(0 -76.0001)" fill="white"/>
+<g id="Hero" clip-path="url(#clip0_0_1)">
+<path id="Rectangle 8" opacity="0.8" d="M-674.133 0H1029.79L589.334 1504.25H-1114.59L-674.133 0Z" fill="url(#paint0_linear_0_1)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_1" x1="-42.3995" y1="0" x2="-42.3995" y2="1504.25" gradientUnits="userSpaceOnUse">
+<stop stop-color="#219EBC"/>
+<stop offset="1" stop-color="#023047"/>
+</linearGradient>
+<clipPath id="clip0_0_1">
+<rect width="1920" height="1080" fill="white" transform="translate(0 -76.0001)"/>
+</clipPath>
+</defs>
+</svg>

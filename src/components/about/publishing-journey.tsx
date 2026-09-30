@@ -94,7 +94,7 @@ export function PublishingJourney() {
           align="center"
           className="lg:text-[clamp(3.5rem,3.889vw,4.6667rem)]"
         >
-          One Team, Every Step of Your <AccentText>Publishing Journey</AccentText>
+          One Team, Every Step Of Your <AccentText>Publishing Journey</AccentText>
         </Heading>
         <p className="mt-2.5 max-w-[38.625rem] text-base leading-normal lg:mt-[clamp(.625rem,.694vw,.8333rem)] lg:max-w-[min(42.917vw,51.5rem)] lg:text-[clamp(1rem,1.111vw,1.3333rem)]">
           Publishing a book involves more moving parts than most authors

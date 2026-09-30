@@ -15,7 +15,7 @@ import {
 export const metadata: Metadata = {
   title: "Design System",
   description:
-    "Immaculate Publishing design tokens, components, and Figma asset inventory.",
+    "Book Publishing Solutions design tokens, components, and Figma asset inventory.",
 };
 
 const colors = [
@@ -55,7 +55,7 @@ export default function DesignSystemPage() {
             Figma foundation · July 2026
           </p>
           <Heading as="h1" size="display" className="max-w-3xl text-white">
-            Immaculate Publishing design system
+            Book Publishing Solutions Design System
           </Heading>
           <p className="mt-5 max-w-2xl text-lg text-white/80">
             Shared tokens and primitives extracted from the Home and Services
@@ -117,7 +117,7 @@ export default function DesignSystemPage() {
 
       <section className="ds-section">
         <Container>
-          <Heading>Actions and surfaces</Heading>
+          <Heading>Actions And Surfaces</Heading>
           <div className="mt-10 grid gap-8 lg:grid-cols-2">
             <div className="flex flex-wrap content-start gap-4">
               <Button>Primary action</Button>
@@ -147,7 +147,7 @@ export default function DesignSystemPage() {
 
       <section className="ds-section bg-surface-soft">
         <Container>
-          <Heading>Asset library</Heading>
+          <Heading>Asset Library</Heading>
           <p className="text-ink/65 mt-2 max-w-2xl">
             100 deduplicated raster assets and 20 reusable SVGs are stored
             locally. The complete inventory lives in the Figma manifest.

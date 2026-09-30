@@ -16,7 +16,7 @@ const services = [
     ),
     label: "Ghost Writing",
     description:
-      "Transform your ideas into a captivating manuscript by collaborating with skilled ghostwriters who not only understand your unique voice but also help shape your vision into a compelling narrative. These professionals are dedicated to crafting a book that resonates deeply with readers across the globe, ensuring that your message is communicated effectively and engagingly. With their expertise, you can bring your story to life in a way that truly connects with audiences everywhere.",
+      "You bring the story. A writer who suits your subject understands your voice and style, then gets it all down so the pages sound like you.",
     image: figmaAssets.services.timelineMedia.ghostwriting,
     imagePosition: "center 56%",
     href: "/services/ghostwriting",
@@ -29,7 +29,7 @@ const services = [
     ),
     label: "Book Editing",
     description:
-      "Our team of skilled editors is dedicated to enhancing your manuscript through a comprehensive process that includes developmental editing, line editing, and proofreading. We meticulously refine every aspect of your work, focusing on improving clarity, flow, structure, and accuracy. This thorough approach ensures that your book not only meets high standards but is also polished and ready for publication, captivating your readers from the very first page.",
+      "The best editing is invisible. We settle the big structural questions first, then work down to rhythm and word choice until reading feels seamless.",
     image: figmaAssets.services.timelineMedia.editing,
     imagePosition: "center",
     href: "/services/book-editing",
@@ -42,7 +42,7 @@ const services = [
     ),
     label: "Design Services",
     description:
-      "Transform your book into a stunning visual experience with our comprehensive professional design solutions. We offer captivating cover designs that not only attract attention but also reflect the essence of your story. Our custom illustrations are tailored to bring your narrative to life, adding depth and character to your pages. Additionally, our expert formatting and typesetting services ensure that every word is presented beautifully, enhancing readability and engagement. Each visual element is meticulously crafted to elevate your story, ensuring it leaves a lasting impression on readers.",
+      "We design covers that earn a second look, set interiors so every page breathes, and create original illustrations that make the story sing.",
     image: figmaAssets.services.timelineMedia.design,
     imagePosition: "center",
     href: "/services/design-services",
@@ -55,7 +55,7 @@ const services = [
     ),
     label: "Publishing Service",
     description:
-      "Transform your manuscript from a polished draft into a published book with our comprehensive end-to-end publishing support. We ensure that your work is not only professionally produced but also effectively distributed to readers across the globe. Our dedicated team will guide you through every step of the process, from editing and design to marketing and sales, making sure your literary masterpiece reaches its full potential and finds its audience.",
+      "Think of us as the crew that transforms your draft into a book that readers would buy. Every call we make centers your genre and goals.",
     image: figmaAssets.services.timelineMedia.publishing,
     imagePosition: "center",
     href: "/services/publishing",
@@ -68,7 +68,7 @@ const services = [
     ),
     label: "Audiobook Production",
     description:
-      "Expand your audience significantly with our expertly produced audiobooks that feature high-quality narration and top-notch audio editing. We take your manuscript and transform it into an immersive listening experience that truly resonates with audiences on today’s leading audiobook platforms. Our team of skilled professionals ensures that every detail is meticulously crafted, allowing your story to shine and captivate listeners, ultimately broadening your reach and enhancing your brand’s presence in the audiobook market.",
+      "More people listen to books than ever. We record yours with professional narration in a real studio, then make it publicly accessible.",
     image: figmaAssets.services.timelineMedia.audiobook,
     imagePosition: "center",
     href: "/services/audiobook-production",
@@ -81,7 +81,7 @@ const services = [
     ),
     label: "Book Marketing",
     description:
-      "Expand your readership by implementing customized marketing strategies that are specifically designed to enhance the visibility of your book. These strategies will not only help to strengthen your author brand but also facilitate meaningful connections between your work and the ideal audience across a variety of channels. By leveraging social media, email campaigns, and targeted promotions, you can effectively reach more readers and create a lasting impact in the literary community.",
+      "Finishing the book is half the job. We plan the launch, gather early reviews, and keep your title in the light long after release week.",
     image: figmaAssets.services.timelineMedia.marketing,
     imagePosition: "center",
     href: "/services/book-marketing",
@@ -96,7 +96,7 @@ export function ServicesTimelineSection() {
     >
       <div
         data-reveal="up"
-        className="mx-auto flex max-w-[60rem] flex-col items-center px-5 text-center sm:px-10 lg:max-w-[min(66.608vw,79.9303rem)] lg:px-0"
+        className="mx-auto flex max-w-[60rem] flex-col items-center px-5 pt-2 text-center sm:px-10 lg:max-w-[min(66.608vw,79.9303rem)] lg:px-0"
       >
         <Heading
           as="h2"
@@ -104,16 +104,11 @@ export function ServicesTimelineSection() {
           align="center"
           className="lg:text-[clamp(3.5rem,3.889vw,4.6667rem)]"
         >
-          Comprehensive Publishing Solutions for{" "}
-          <AccentText>Aspiring &amp; Established Authors</AccentText>
+          One Platform For <AccentText>Every Part Of The Job</AccentText>
         </Heading>
         <p className="mt-2.5 max-w-[38.625rem] text-base leading-[1.2] lg:mt-[clamp(.625rem,.694vw,.8333rem)] lg:max-w-[min(42.917vw,51.5rem)] lg:text-[clamp(1rem,1.111vw,1.3333rem)] lg:leading-[normal]">
-          At Book Publication Services, we provide end-to-end publishing
-          services designed to transform your ideas into professionally
-          published books. From perfecting every page to creating stunning
-          visuals, our experienced team manages every stage with precision,
-          creativity, and care, so you can focus on what matters most: your
-          story.
+          From the first rough draft to a worldwide launch, all services under
+          one roof.
         </p>
       </div>
 

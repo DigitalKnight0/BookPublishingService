@@ -1,7 +1,11 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 import { AccentText, Heading } from "@/components/ui";
 import { figmaAssets } from "@/design-system";
+import { cn } from "@/lib/utils";
 
 const bookNames = [
   "Carrie Anne’s World",
@@ -9,6 +13,18 @@ const bookNames = [
   "The Museum of Extraordinary Things",
   "Resilience",
   "The Museum of Extraordinary Things",
+] as const;
+
+const workCategories = [
+  "Autobiography & Memoir",
+  "Religion & Spirituality",
+  "Children's Book",
+  "Fantasy & Sci-Fi",
+  "Thriller & Suspense",
+  "Romance",
+  "Cookbooks",
+  "Self-Help",
+  "Poetry",
 ] as const;
 
 function WorkBook({ cover, name }: { cover: string; name: string }) {
@@ -39,6 +55,10 @@ function WorkBook({ cover, name }: { cover: string; name: string }) {
 }
 
 export function WorkShowcase() {
+  const [activeCategory, setActiveCategory] = useState<string>(
+    workCategories[0],
+  );
+
   return (
     <section
       id="work"
@@ -67,7 +87,7 @@ export function WorkShowcase() {
           align="center"
           className="lg:text-[clamp(3.5rem,3.889vw,4.6667rem)]"
         >
-          Check out Our <AccentText>Work</AccentText>
+          Books We&apos;ve <AccentText>Helped Publish</AccentText>
         </Heading>
         <p className="mt-2.5 max-w-[38.625rem] text-base leading-[1.2] lg:mt-[clamp(.625rem,.694vw,.8333rem)] lg:w-[clamp(38.625rem,42.917vw,51.5rem)] lg:max-w-none lg:text-[clamp(1rem,1.111vw,1.3333rem)] lg:leading-normal">
           We make it easy for authors to get their manuscripts edited,
@@ -79,16 +99,42 @@ export function WorkShowcase() {
       <div
         data-reveal="scale"
         data-reveal-delay="1"
-        className="relative z-10 mt-[3.125rem] flex flex-wrap items-center justify-center gap-3 px-5 text-base font-medium sm:gap-[1.875rem] sm:text-xl lg:mt-[clamp(3.125rem,3.472vw,4.1667rem)] lg:gap-[clamp(1.875rem,2.083vw,2.5rem)] lg:text-[clamp(1.25rem,1.389vw,1.6667rem)]"
+        role="tablist"
+        aria-label="Filter work by genre"
+        className="relative z-10 mx-auto mt-[3.125rem] flex max-w-[78rem] flex-wrap items-center justify-center gap-2 px-5 text-sm font-medium sm:gap-2.5 sm:px-10 sm:text-[0.9375rem] lg:mt-[clamp(3.125rem,3.472vw,4.1667rem)] lg:gap-[clamp(.5rem,.556vw,.6667rem)] lg:px-0 lg:text-[clamp(.875rem,.972vw,1.1667rem)]"
       >
-        <span className="bg-gradient-action inline-flex min-h-[3.0625rem] items-center rounded-[0.625rem] border border-white/30 px-5 text-white lg:min-h-[clamp(3.0625rem,3.403vw,4.0833rem)] lg:rounded-[clamp(.625rem,.694vw,.8333rem)] lg:px-[clamp(1.25rem,1.389vw,1.6667rem)]">
-          Ghost Writing
-        </span>
-        <span>Creative Writing</span>
-        <span>Wikipedia Writing</span>
+        {workCategories.map((category) => {
+          const isActive = activeCategory === category;
+
+          return (
+            <button
+              key={category}
+              type="button"
+              role="tab"
+              aria-selected={isActive}
+              aria-controls="lp-work-carousel"
+              tabIndex={isActive ? 0 : -1}
+              onClick={() => setActiveCategory(category)}
+              className={cn(
+                "inline-flex min-h-[2.625rem] cursor-pointer items-center rounded-[0.625rem] border px-3.5 py-2 leading-tight transition-[color,background-color,border-color,transform,box-shadow] duration-300 active:scale-[.98] lg:min-h-[clamp(2.625rem,2.917vw,3.5rem)] lg:rounded-[clamp(.5rem,.556vw,.6667rem)] lg:px-[clamp(.75rem,.833vw,1rem)]",
+                isActive
+                  ? "border-white/30 bg-gradient-action text-white shadow-[0_8px_20px_rgba(2,48,71,.18)]"
+                  : "border-transparent bg-white/80 text-ink hover:-translate-y-0.5 hover:border-brand/20 hover:bg-white",
+              )}
+            >
+              {category}
+            </button>
+          );
+        })}
       </div>
 
-      <div className="launch-marquee relative z-10 mt-8 w-full overflow-hidden [mask-image:linear-gradient(90deg,transparent_0%,black_5%,black_95%,transparent_100%)] lg:mt-[clamp(3.125rem,3.472vw,4.1667rem)]">
+      <div
+        key={activeCategory}
+        id="lp-work-carousel"
+        role="tabpanel"
+        aria-label={`${activeCategory} projects`}
+        className="genre-content-enter launch-marquee relative z-10 mt-8 w-full overflow-hidden [mask-image:linear-gradient(90deg,transparent_0%,black_5%,black_95%,transparent_100%)] lg:mt-[clamp(3.125rem,3.472vw,4.1667rem)]"
+      >
         <div className="launch-marquee-track flex h-[22.4375rem] w-max items-center lg:h-[clamp(22.4375rem,24.931vw,29.9167rem)]">
           {[false, true].map((duplicate) => (
             <div

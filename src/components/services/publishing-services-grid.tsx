@@ -1,10 +1,18 @@
 import {
+  BadgeCheck,
+  Barcode,
+  BookImage,
   BookOpen,
+  FileCheck,
   FileText,
+  Globe,
   Headphones,
+  LayoutTemplate,
   Megaphone,
   Palette,
   PenTool,
+  Printer,
+  TabletSmartphone,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,7 +24,7 @@ const services = [
   {
     title: "Ghost Writing",
     description:
-      "Skilled writers turn your ideas into a compelling manuscript.",
+      "We turn your idea into a finished manuscript in your voice.",
     image: figmaAssets.services.timelineMedia.ghostwriting,
     position: "center 48%",
     icon: PenTool,
@@ -25,7 +33,7 @@ const services = [
   {
     title: "Book Editing",
     description:
-      "Developmental, line, copy editing, and proofreading by industry professionals.",
+      "We shape, sharpen, and polish every page.",
     image: figmaAssets.services.timelineMedia.editing,
     position: "center",
     icon: FileText,
@@ -34,7 +42,7 @@ const services = [
   {
     title: "Design Services",
     description:
-      "Distinctive covers, polished interiors, formatting, and custom illustration.",
+      "We create the cover, the interior, and any original art.",
     image: figmaAssets.services.timelineMedia.design,
     position: "center",
     icon: Palette,
@@ -43,7 +51,7 @@ const services = [
   {
     title: "Publishing Service",
     description:
-      "End-to-end publishing, platform setup, and worldwide distribution support.",
+      "We get your book listed with retailers worldwide.",
     image: figmaAssets.services.timelineMedia.publishing,
     position: "center",
     icon: BookOpen,
@@ -52,16 +60,97 @@ const services = [
   {
     title: "Audiobook Production",
     description:
-      "Professional narration, recording, editing, mastering, and delivery.",
+      "We record, edit, master, and deliver a professional listening experience.",
     image: figmaAssets.services.timelineMedia.audiobook,
     position: "center 40%",
     icon: Headphones,
     href: "/services/audiobook-production",
   },
   {
+    title: "Proofreading",
+    description:
+      "We clear out the final typos, spacing issues, and tiny slips before publication.",
+    image: "/assets/generated/services/proofreading.png",
+    position: "center",
+    icon: FileCheck,
+    href: "/services/proofreading",
+  },
+  {
+    title: "Cover Design",
+    description:
+      "We create a cover that earns attention and speaks to the right reader.",
+    image: "/assets/generated/services/cover-design.png",
+    position: "center",
+    icon: Palette,
+    href: "/services/cover-design",
+  },
+  {
+    title: "Interior Formatting",
+    description:
+      "We set every page for comfortable reading in print and on screen.",
+    image: "/assets/generated/services/interior-formatting.png",
+    position: "center",
+    icon: LayoutTemplate,
+    href: "/services/interior-formatting",
+  },
+  {
+    title: "Book Illustration",
+    description:
+      "We develop original artwork from the first sketch to the finished page.",
+    image: "/assets/generated/services/book-illustration.png",
+    position: "center",
+    icon: BookImage,
+    href: "/services/book-illustration",
+  },
+  {
+    title: "eBook and Kindle",
+    description:
+      "We build and test digital editions that work beautifully on every device.",
+    image: "/assets/generated/services/ebook-kindle.png",
+    position: "center",
+    icon: TabletSmartphone,
+    href: "/services/ebook-kindle",
+  },
+  {
+    title: "Author Branding",
+    description:
+      "We shape a recognizable author identity that can grow beyond one book.",
+    image: "/assets/generated/services/author-branding.png",
+    position: "center",
+    icon: BadgeCheck,
+    href: "/services/author-branding",
+  },
+  {
+    title: "ISBN Registration",
+    description:
+      "We handle ISBN, barcode, copyright, and metadata administration for you.",
+    image: "/assets/generated/services/isbn-registration.png",
+    position: "center",
+    icon: Barcode,
+    href: "/services/isbn-registration",
+  },
+  {
+    title: "Printing Services",
+    description:
+      "We arrange premium print-on-demand or larger print runs in your chosen finish.",
+    image: "/assets/generated/services/printing-services.png",
+    position: "center",
+    icon: Printer,
+    href: "/services/printing-services",
+  },
+  {
+    title: "Global Distribution",
+    description:
+      "We place your finished book in front of retailers and readers worldwide.",
+    image: "/assets/generated/services/global-distribution.png",
+    position: "center",
+    icon: Globe,
+    href: "/services/global-distribution",
+  },
+  {
     title: "Book Marketing",
     description:
-      "Audience-focused campaigns that build visibility and grow your author brand.",
+      "We help readers find your book and keep it selling.",
     image: figmaAssets.services.timelineMedia.marketing,
     position: "center",
     icon: Megaphone,
@@ -81,12 +170,10 @@ export function PublishingServicesGrid() {
           className="mx-auto flex max-w-[45.5rem] flex-col items-center text-center"
         >
           <Heading as="h2" size="display" align="center">
-            Our Publishing <AccentText>Services</AccentText>
+            Everything It Takes <AccentText>To Publish Your Own Book</AccentText>
           </Heading>
           <p className="mt-2.5 max-w-[38.625rem] text-base leading-[1.2]">
-            We make it easy for authors to get their manuscripts edited,
-            proofread, and formatted and make them ready to be published for
-            their readers.
+            Choose a single service or bring the full project under one roof.
           </p>
         </div>
 

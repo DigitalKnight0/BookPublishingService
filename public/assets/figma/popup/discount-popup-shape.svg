@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="886.819" height="722.169" viewBox="0 0 886.819 722.169" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 1">
+<ellipse id="Ellipse 3" cx="443.409" cy="361.085" rx="396.793" ry="294.269" transform="rotate(-10.4036 443.409 361.085)" fill="white"/>
+<path id="Ellipse 2" d="M391.728 79.5934C497.213 60.2265 598.317 73.512 676.497 110.586C754.678 147.661 809.844 208.47 823.738 284.144C837.632 359.819 807.665 436.259 747.752 498.688C687.841 561.116 598.05 609.45 492.566 628.817C387.081 648.184 285.977 634.898 207.797 597.824C129.616 560.749 74.4494 499.94 60.5555 424.265C46.6617 348.59 76.6292 272.151 136.542 209.722C196.453 147.294 286.244 98.9604 391.728 79.5934Z" fill="url(#paint0_linear_0_7)" stroke="url(#paint1_linear_0_7)" stroke-width="2.51905"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_7" x1="485.821" y1="72.2238" x2="496.342" y2="700.343" gradientUnits="userSpaceOnUse">
+<stop stop-color="#219EBC"/>
+<stop offset="1" stop-color="#023047"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_7" x1="391.501" y1="78.3544" x2="492.793" y2="630.055" gradientUnits="userSpaceOnUse">
+<stop stop-color="#219EBC"/>
+<stop offset="1" stop-color="#023047"/>
+</linearGradient>
+</defs>
+</svg>
